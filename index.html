@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>个人主页</title>
+  <meta name="description" content="记录 C++、Linux 和算法的学习过程。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./">个人主页</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./" aria-current="page">首页</a>
+        <a href="#route">学习路线</a>
+        <a href="blog/">博客</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>个人主页</h1>
+      <p class="lead">记录 C++、Linux 和算法的学习过程。</p>
+    </section>
+
+    <section class="section" id="route">
+      <div class="section-head">
+        <h2>学习路线</h2>
+      </div>
+      <p class="section-note">具体章节和完成状态整理中。</p>
+      <div class="route-grid">
+        <article class="route-card">
+          <h3>C++</h3>
+          <p>章节整理中</p>
+          <!-- 补充章节时，把上面的 <p> 换成下面的列表。状态：done 已完成 / doing 进行中 / todo 未开始
+          <ol class="steps">
+            <li class="done">章节名</li>
+            <li class="doing">章节名</li>
+            <li class="todo">章节名</li>
+          </ol>
+          -->
+        </article>
+        <article class="route-card">
+          <h3>Linux</h3>
+          <p>章节整理中</p>
+        </article>
+        <article class="route-card">
+          <h3>算法 <span class="tag">复习</span></h3>
+          <p>章节整理中</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="section-head">
+        <h2>博客</h2>
+        <a href="blog/">全部文章 →</a>
+      </div>
+      <div data-post-list data-base="blog/" data-limit="5">
+        <noscript><p class="empty">文章列表需要启用 JavaScript。</p></noscript>
+      </div>
+    </section>
+
+    <section class="section" id="links">
+      <div class="section-head">
+        <h2>链接</h2>
+      </div>
+      <ul class="link-list">
+        <li>
+          <a href="https://github.com/xiaoaoyaojiayou123" target="_blank" rel="noopener">
+            <span class="link-name">GitHub</span>
+            <span class="link-sub">xiaoaoyaojiayou123</span>
+          </a>
+        </li>
+        <!-- Gitee / CSDN 链接拿到后照上面的格式添加 -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span data-year>2026</span> 个人主页</span>
+      <!-- 备案号：网站迁到已备案服务器后启用
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">备案号</a>
+      -->
+    </div>
+  </footer>
+
+  <script src="posts/posts.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -2,6 +2,53 @@
 
 个人主页和博客的源码仓库。第一版做成静态站，使用 GitHub Pages 免费托管。先用 GitHub 提供的网址验收，再绑定自己的域名。
 
+## 当前版本
+
+纯 HTML + CSS + JavaScript，没有构建步骤，仓库根目录就是网站根目录。所有链接都是相对路径，放在 `https://xiaoaoyaojiayou123.github.io/homepage/` 或以后 nginx 的 `/` 下都能用。
+
+```
+index.html              首页：简介、学习路线、最新文章、链接
+blog/index.html         文章列表
+blog/post.html          文章页，地址形如 blog/post.html?slug=文件名
+posts/posts.js          文章目录（标题、日期、摘要、标签）
+posts/*.md              文章正文（Markdown）
+posts/images/           文章图片
+assets/css/style.css    样式，浅色/深色跟随系统
+assets/js/site.js       列表和文章渲染
+assets/vendor/          Markdown 渲染库 marked 18.1.2（MIT，已放进仓库，不依赖 CDN）
+.nojekyll               让 GitHub Pages 原样发布文件
+```
+
+## 本地预览
+
+文章用 `fetch` 读取 Markdown，双击打开 HTML 文件看不到文章，需要用本地服务器。在仓库的**上一级目录**运行：
+
+```bash
+python -m http.server 8000
+```
+
+然后打开 <http://localhost:8000/homepage/>，路径和 GitHub Pages 默认地址一致。
+
+## 发布一篇文章
+
+1. 在 `posts/` 新建 `文件名.md`，文件名只用小写字母、数字和连字符，例如 `mistake-log-01.md`。正文开头的一级标题（`# 标题`）会被自动去掉，页面标题取自下一步。
+2. 图片放 `posts/images/`，正文里写 `![说明](images/图片名.png)`。
+3. 在 `posts/posts.js` 的 `window.POSTS` 里加一行：
+
+   ```js
+   { slug: "mistake-log-01", title: "错题复盘：……", date: "2026-11-20", summary: "一句话摘要", tags: ["算法"] },
+   ```
+
+4. 本地预览确认后提交推送，GitHub Pages 会自动更新（通常一两分钟）。
+
+## 待补充
+
+- 正式昵称：替换 `index.html`、`blog/index.html`、`blog/post.html` 里的「个人主页」（页眉、标题、页脚）。
+- 较长的自我介绍：加在 `index.html` 的 `.hero` 里。
+- 学习路线的章节和完成状态：`index.html` 里有注释示例，状态用 `done` / `doing` / `todo`。
+- Gitee、CSDN 链接：照 `index.html` 里 GitHub 那一项添加。
+- 备案号：迁到已备案服务器后，取消 `index.html` 页脚里的注释。
+
 ## Claude 接手后先做什么
 
 1. 从最新的 `main` 开始，按站主给的内容和设计要求完成个人主页、博客列表和文章页。
