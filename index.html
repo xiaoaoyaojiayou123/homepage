@@ -1,20 +1,24 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>个人主页</title>
-  <meta name="description" content="记录 C++、Linux 和算法的学习过程。">
+  <title>Dracatrice 的个人主页</title>
+  <meta name="description" content="Dracatrice 的个人主页：记录 C++、Linux、MySQL 和算法的学习过程。">
+  <meta name="theme-color" content="#07080d">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.remove("no-js");</script>
 </head>
 <body>
+  <div class="bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="./">个人主页</a>
+      <a class="brand" href="./">Dracatrice</a>
       <nav class="site-nav" aria-label="主导航">
         <a href="./" aria-current="page">首页</a>
-        <a href="#route">学习路线</a>
+        <a href="#route">路线</a>
         <a href="blog/">博客</a>
       </nav>
     </div>
@@ -22,41 +26,183 @@
 
   <main class="container">
     <section class="hero">
-      <h1>个人主页</h1>
-      <p class="lead">记录 C++、Linux 和算法的学习过程。</p>
+      <div class="hero-text">
+        <span class="eyebrow reveal"><span class="dot"></span>~/dracatrice</span>
+        <h1 class="reveal" style="--delay:.06s"><span class="gradient-text">Dracatrice</span></h1>
+        <p class="hero-sub reveal" style="--delay:.1s">软件工程本科在读</p>
+        <p class="typed-line reveal" style="--delay:.14s"><span class="prompt">$</span><span data-typed>记录 C++、Linux、MySQL 和算法的学习过程。</span><span class="caret"></span></p>
+        <ul class="chips reveal" style="--delay:.18s">
+          <li>C++</li>
+          <li>Linux</li>
+          <li>MySQL</li>
+          <li>算法</li>
+        </ul>
+        <div class="hero-actions reveal" style="--delay:.24s">
+          <a class="btn primary" href="#route">学习路线 →</a>
+          <a class="btn" href="blog/">阅读博客</a>
+        </div>
+      </div>
+
+      <div class="terminal reveal" style="--delay:.3s">
+        <div class="terminal-bar"><span></span><span></span><span></span><em>zsh — learning</em></div>
+<pre class="terminal-body"><span class="prompt">~ $</span> whoami
+<span class="out">Dracatrice</span>
+<span class="prompt">~ $</span> ls learning/
+<span class="dir">cpp/</span>  <span class="dir">linux/</span>  <span class="dir">mysql/</span>  <span class="dir">algorithms/</span>
+<span class="prompt">~ $</span> cat blog/latest
+<span class="out" data-latest>第一篇文章准备中…</span>
+<span class="prompt">~ $</span> <span class="caret"></span></pre>
+      </div>
     </section>
 
     <section class="section" id="route">
-      <div class="section-head">
-        <h2>学习路线</h2>
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">01 / ROADMAP</span>
+          <h2>学习路线</h2>
+        </div>
       </div>
-      <p class="section-note">具体章节和完成状态整理中。</p>
+      <p class="section-note reveal">四个方向同时推进，点开可以看章节。</p>
       <div class="route-grid">
-        <article class="route-card">
-          <h3>C++</h3>
-          <p>章节整理中</p>
-          <!-- 补充章节时，把上面的 <p> 换成下面的列表。状态：done 已完成 / doing 进行中 / todo 未开始
-          <ol class="steps">
-            <li class="done">章节名</li>
-            <li class="doing">章节名</li>
-            <li class="todo">章节名</li>
-          </ol>
-          -->
+        <article class="route-card card reveal">
+          <span class="route-icon"><span class="gradient-text">{ }</span></span>
+          <h3>C++ <span class="tag">进行中</span></h3>
+          <div class="progress pending"><span></span></div>
+          <details class="chapters">
+            <summary>章节（18）</summary>
+            <!-- 标进度：给 li 加 class="done" 已完成 / "doing" 进行中 / "todo" 未开始 -->
+            <ol class="steps">
+              <li>C++ 入门基础</li>
+              <li>类和对象（上）</li>
+              <li>类和对象（中）</li>
+              <li>类和对象（下）</li>
+              <li>内存管理</li>
+              <li>模板初阶</li>
+              <li>STL 简介</li>
+              <li>string</li>
+              <li>vector</li>
+              <li>list</li>
+              <li>stack 和 queue</li>
+              <li>模板进阶</li>
+              <li>继承</li>
+              <li>多态</li>
+              <li>二叉搜索树</li>
+              <li>map 和 set 的使用</li>
+              <li>AVL 树实现</li>
+              <li>红黑树实现</li>
+            </ol>
+          </details>
         </article>
-        <article class="route-card">
-          <h3>Linux</h3>
-          <p>章节整理中</p>
+        <article class="route-card card reveal" style="--delay:0.08s">
+          <span class="route-icon"><span class="gradient-text">&gt;_</span></span>
+          <h3>Linux <span class="tag">进行中</span></h3>
+          <div class="progress pending"><span></span></div>
+          <details class="chapters">
+            <summary>章节（6）</summary>
+            <!-- 标进度：给 li 加 class="done" 已完成 / "doing" 进行中 / "todo" 未开始 -->
+            <ol class="steps">
+              <li>Linux 基础指令</li>
+              <li>基础开发工具</li>
+              <li>进程概念</li>
+              <li>进程控制</li>
+              <li>基础 IO</li>
+              <li>Ext 系列文件系统</li>
+            </ol>
+          </details>
         </article>
-        <article class="route-card">
+        <article class="route-card card reveal" style="--delay:0.16s">
+          <span class="route-icon"><span class="gradient-text">SQL</span></span>
+          <h3>MySQL <span class="tag">进行中</span></h3>
+          <div class="progress pending"><span></span></div>
+          <details class="chapters">
+            <summary>章节（14）</summary>
+            <!-- 标进度：给 li 加 class="done" 已完成 / "doing" 进行中 / "todo" 未开始 -->
+            <ol class="steps">
+              <li>数据库基础</li>
+              <li>库的操作</li>
+              <li>表的操作</li>
+              <li>数据类型</li>
+              <li>表的约束</li>
+              <li>基本查询</li>
+              <li>内置函数</li>
+              <li>复合查询</li>
+              <li>内外连接</li>
+              <li>索引</li>
+              <li>事务管理</li>
+              <li>视图</li>
+              <li>用户管理</li>
+              <li>C 语言连接 MySQL</li>
+            </ol>
+          </details>
+        </article>
+        <article class="route-card card reveal" style="--delay:0.24s">
+          <span class="route-icon"><span class="gradient-text">O(n)</span></span>
           <h3>算法 <span class="tag">复习</span></h3>
-          <p>章节整理中</p>
+          <div class="progress pending"><span></span></div>
+          <details class="chapters">
+            <summary>章节（12）</summary>
+            <!-- 标进度：给 li 加 class="done" 已完成 / "doing" 进行中 / "todo" 未开始 -->
+            <ol class="steps">
+              <li>模拟</li>
+              <li>高精度</li>
+              <li>枚举</li>
+              <li>前缀和</li>
+              <li>差分</li>
+              <li>双指针</li>
+              <li>二分</li>
+              <li>贪心</li>
+              <li>倍增思想</li>
+              <li>离散化</li>
+              <li>递归初阶</li>
+              <li>分治</li>
+            </ol>
+          </details>
         </article>
       </div>
     </section>
 
+    <section class="section" id="log">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">02 / LOG</span>
+          <h2>学习动态</h2>
+        </div>
+      </div>
+      <!-- 新的里程碑加在最上面：复制一个 <li>，改日期和文字 -->
+      <ol class="timeline">
+        <li class="reveal">
+          <time datetime="2026-11-13">2026-11-13</time>
+          <p>个人主页第一版完成</p>
+        </li>
+        <li class="reveal">
+          <time datetime="2026-11-04">2026-11-04</time>
+          <p>算法恢复：高精度加法独立 AC</p>
+        </li>
+        <li class="reveal">
+          <time datetime="2026-10-29">2026-10-29</time>
+          <p>调整学习路线：按能力范围和实际产出推进</p>
+        </li>
+        <li class="reveal">
+          <time datetime="2026-09-14">2026-09-14</time>
+          <p>顺序表、链表、栈、队列、堆的 C 语言实现全部走查通过</p>
+        </li>
+        <li class="reveal">
+          <time datetime="2026-08-27">2026-08-27</time>
+          <p>建立代码仓库 road-to-2027，云服务器到位</p>
+        </li>
+        <li class="reveal">
+          <time datetime="2026-08-23">2026-08-23</time>
+          <p>学习规划定稿</p>
+        </li>
+      </ol>
+    </section>
+
     <section class="section" id="blog">
-      <div class="section-head">
-        <h2>博客</h2>
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">03 / BLOG</span>
+          <h2>博客</h2>
+        </div>
         <a href="blog/">全部文章 →</a>
       </div>
       <div data-post-list data-base="blog/" data-limit="5">
@@ -65,24 +211,52 @@
     </section>
 
     <section class="section" id="links">
-      <div class="section-head">
-        <h2>链接</h2>
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">04 / ELSEWHERE</span>
+          <h2>链接</h2>
+        </div>
       </div>
       <ul class="link-list">
-        <li>
-          <a href="https://github.com/xiaoaoyaojiayou123" target="_blank" rel="noopener">
-            <span class="link-name">GitHub</span>
-            <span class="link-sub">xiaoaoyaojiayou123</span>
+        <li class="reveal">
+          <a class="link-card card" href="https://github.com/xiaoaoyaojiayou123" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            <span>
+              <span class="link-name">GitHub</span>
+              <span class="link-sub">xiaoaoyaojiayou123</span>
+            </span>
+            <span class="arrow">↗</span>
           </a>
         </li>
-        <!-- Gitee / CSDN 链接拿到后照上面的格式添加 -->
+        <!-- ===== 预留位：Gitee / CSDN / 其他链接 =====
+             用法：把下面一段 <li>…</li> 复制到这行注释的外面，改 href、名称和账号名。
+        <li class="reveal">
+          <a class="link-card card" href="https://gitee.com/你的账号" target="_blank" rel="noopener">
+            <span>
+              <span class="link-name">Gitee</span>
+              <span class="link-sub">你的账号</span>
+            </span>
+            <span class="arrow">↗</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="link-card card" href="https://blog.csdn.net/你的账号" target="_blank" rel="noopener">
+            <span>
+              <span class="link-name">CSDN</span>
+              <span class="link-sub">旧文章</span>
+            </span>
+            <span class="arrow">↗</span>
+          </a>
+        </li>
+        -->
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <span>© <span data-year>2026</span> 个人主页</span>
+      <span>© <span data-year>2026</span> Dracatrice</span>
+      <span>built with HTML · CSS · JS</span>
       <!-- 备案号：网站迁到已备案服务器后启用
       <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">备案号</a>
       -->

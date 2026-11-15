@@ -10,4 +10,6 @@
 // { slug: "mistake-log-01", title: "错题复盘：……", date: "2026-11-20", summary: "……", tags: ["算法"] },
 
 window.POSTS = [
+  // 示例文章，测试用；发正式文章后可以删掉这一行和 posts/demo-nullptr-vs-null.md
+  { slug: "demo-nullptr-vs-null", title: "示例文章：nullptr 和 NULL 到底差在哪", date: "2026-11-14", summary: "测试用的示例文章，取自错题本里的一条记录。", tags: ["C++", "示例"] },
 ];
