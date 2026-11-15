@@ -7,14 +7,14 @@
 纯 HTML + CSS + JavaScript，没有构建步骤，仓库根目录就是网站根目录。所有链接都是相对路径，放在 `https://xiaoaoyaojiayou123.github.io/homepage/` 或以后 nginx 的 `/` 下都能用。
 
 ```
-index.html              首页：简介、学习路线、最新文章、链接
+index.html              首页：简介、学习路线、学习动态、最新文章、链接
 blog/index.html         文章列表
 blog/post.html          文章页，地址形如 blog/post.html?slug=文件名
 posts/posts.js          文章目录（标题、日期、摘要、标签）
 posts/*.md              文章正文（Markdown）
 posts/images/           文章图片
-assets/css/style.css    样式，浅色/深色跟随系统
-assets/js/site.js       列表和文章渲染
+assets/css/style.css    样式，深色科技风，系统为浅色时切换浅色版
+assets/js/site.js       列表和文章渲染、打字和滚动动效
 assets/vendor/          Markdown 渲染库 marked 18.1.2（MIT，已放进仓库，不依赖 CDN）
 .nojekyll               让 GitHub Pages 原样发布文件
 ```
@@ -41,12 +41,20 @@ python -m http.server 8000
 
 4. 本地预览确认后提交推送，GitHub Pages 会自动更新（通常一两分钟）。
 
-## 待补充
+## 当前状态（2026-11-14 暂停）
 
-- 正式昵称：替换 `index.html`、`blog/index.html`、`blog/post.html` 里的「个人主页」（页眉、标题、页脚）。
-- 较长的自我介绍：加在 `index.html` 的 `.hero` 里。
-- 学习路线的章节和完成状态：`index.html` 里有注释示例，状态用 `done` / `doing` / `todo`。
-- Gitee、CSDN 链接：照 `index.html` 里 GitHub 那一项添加。
+网站结构已完成，先搁置，专心学习。之后每学完一课，整理成文章发上来；等项目（仿 muduo）开工后再回来整理内容。
+
+已有内容：昵称 Dracatrice、「软件工程本科在读」、四个方向的章节（C++、Linux、MySQL、算法）、学习动态时间线、GitHub 链接、一篇示例文章。
+
+还没做的事：
+
+- 推送到 GitHub 并在 **Settings → Pages** 开启发布（见下文）。在这之前网站只在本地，线上看不到。
+- 发第一篇正式文章后，删掉示例文章：`posts/demo-nullptr-vs-null.md` 和 `posts/posts.js` 里对应的那一行。
+- Gitee、CSDN 链接：`index.html` 的「链接」区块里有注释掉的模板，复制到注释外面，改网址和账号名。
+- 章节进度：`index.html` 学习路线里给 `<li>` 加 `class="done"` / `"doing"` / `"todo"`。
+- 新里程碑：在 `index.html` 的「学习动态」里复制一个 `<li>`，放在最上面，改日期和文字。
+- 较长的自我介绍：加在 `index.html` 的 `.hero-text` 里。
 - 备案号：迁到已备案服务器后，取消 `index.html` 页脚里的注释。
 
 ## Claude 接手后先做什么

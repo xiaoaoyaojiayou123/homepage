@@ -1,28 +1,33 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>博客 · 个人主页</title>
+  <title>博客 · Dracatrice</title>
   <meta name="description" content="C++、Linux 和算法的学习文章。">
+  <meta name="theme-color" content="#07080d">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script>document.documentElement.classList.remove("no-js");</script>
 </head>
 <body>
+  <div class="bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="../">个人主页</a>
+      <a class="brand" href="../">Dracatrice</a>
       <nav class="site-nav" aria-label="主导航">
         <a href="../">首页</a>
-        <a href="../#route">学习路线</a>
+        <a href="../#route">路线</a>
         <a href="./" aria-current="page">博客</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <div class="page-head">
-      <h1>博客</h1>
+  <main class="container narrow">
+    <div class="page-head reveal">
+      <h1><span class="gradient-text">博客</span></h1>
+      <p><span class="prompt">~/blog $</span> ls -t</p>
     </div>
     <div data-post-list data-base="">
       <noscript><p class="empty">文章列表需要启用 JavaScript。</p></noscript>
@@ -31,7 +36,8 @@
 
   <footer class="site-footer">
     <div class="container">
-      <span>© <span data-year>2026</span> 个人主页</span>
+      <span>© <span data-year>2026</span> Dracatrice</span>
+      <span>built with HTML · CSS · JS</span>
     </div>
   </footer>
 
